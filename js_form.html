@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>js</title>
+</head>
+<style type="text/css" media="screen">
+body {
+    text-align: center;
+}
+
+#header {
+    background-color: #ccc;
+}
+
+.section {
+    width: 100%;
+    height: 1000px;
+}
+
+.test1 {
+    background-color: #ccc;
+}
+
+.test2 {
+    background-color: #ff0;
+}
+
+.test3 {
+    background-color: #0DFF87;
+}
+
+.inner001 {
+    background-color: #fff;
+    height: 200px;
+    opacity: 0;
+    transition: 1s;
+}
+
+.inner002 {
+    background-color: #fff;
+    height: 200px;
+}
+
+.inner003 {
+    background-color: #fff;
+    height: 200px;
+}
+
+.form-section p {
+    padding: 10px;
+}
+.test{
+    background-color: #ff0;
+}
+</style>
+
+<body>
+    <header id="header">
+        <h1 id="next" class="testpp">javascript これこれ</h1>
+        <p>
+            <buttom id="box">box</buttom>
+        </p>
+    </header>
+    <div>
+    </div>
+    <nav id="nav" class="nav-wrap">
+        <ul class="nav-list">
+            <li class="nav-item"><a href="#" class="nav-item-link">test1</a>0000</li>
+            <li class="nav-item"><a href="#" class="nav-item-link">test2</a></li>
+            <li class="nav-item"><a href="#" class="nav-item-link">test3</a></li>
+            <li class="nav-item test"><a href="#" class="nav-item-link">test4</a></li>
+            <li class="nav-item"><a href="#" class="nav-item-link">test5</a></li>
+            <li class="nav-item"><a href="#" class="nav-item-link">test6</a></li>
+            <li class="nav-item"><a href="#" class="nav-item-link">test7</a></li>
+        </ul>
+    </nav>
+    <section id="form-section" class="form-section">
+        <h2>form</h2>
+        <form id="form" name="fm" action="">
+            <p id="namewrap">
+                <input type="text" name="name" onblur="focusName(this);" onchange="nopush()" id="username" class="user-name" required="required" maxlength="50">
+                <label for="">:名前 (※必須項目です。)</label><div id="namea"></div></p>
+            <p>
+                <input type="text" name="namekana" id="usernamekana" class="user-name-kana">
+                <label for="usernamekana">:カナ入力です。</label><span id="usernamekana"></span>
+            </p>
+            <p>
+                <input type="email" name="mail" id="usermail" required="required" onblur="focusmail(this);" onchange="nopush()" maxlength="100" />
+                <label for="usermail">:メール (※必須項目です。)</label>
+                <span id="usermaila"></span></p>
+            <p>
+                <input type="tel" name="phone" id="tell" maxlength="20" required="required" />
+                <label for="tell">電話番号</label>
+            </p>
+            <p>
+                <select name="js" id="jsuse">
+                    <option value="" selected="selected">javascript</option>
+                    <option value="angular">angular</option>
+                    <option value="vue">vue</option>
+                    <option value="ecma">ECMA</option>
+                </select>
+                <span id="jsusea"></span></p>
+            <p>
+                <input type="radio" name="choice" value="sports" id="sports" autocomplete="off" /> <label for="sports">スポーツ</label>
+                <input type="radio" name="choice" value="design" id="design" autocomplete="off" /><label for="design">デザイン</label>
+                <input type="radio" name="choice" value="art" id="art" autocomplete="off" /><label for="art">アート</label>
+                <input type="radio" name="choice" value="pro" id="proi" autocomplete="off" /><label for="proi">プログラム</label>
+                <span id="proia"></span>
+            </p>
+            <p>
+                <input type="checkbox" name="think" id="tso" value="戦略" />
+                <label for="tso">戦略的思考</label>
+                <input type="checkbox" name="think" id="tdesign" value="デザイン" />
+                <label for="tdesign">デザイン思考</label>
+                <input type="checkbox" name="think" id="tobj" value="オブジェクティブ" />
+                <label for="tobj">オブジェクティブ思考</label>
+                <span id="tsoa"></span>
+            </p>
+            <input type="submit" value="submit" id="submit" onchange="nopush()" disabled="disabled">
+        </form>
+    </section>
+    <footer>
+        <div id="ooo" class="footer-inner">
+            good life
+        </div>
+    </footer>
+    <script>
+    var fmid = document.getElementById('form');
+    var rs = document.getElementById('ooo');
+    var namea = document.getElementById('namewrap');
+    var usermaila = document.getElementById('usermaila');
+    var jsusea = document.getElementById('jsusea');
+    var proia = document.getElementById('proia');
+    var tsoa = document.getElementById('tsoa');
+
+    var submit = document.getElementById('submit');
+    var fm = document.fm;
+function focusName( $this ){
+var name = fm.name.value;
+             if (name != null && name != '') {
+                namea.innerHTML = "";
+                namea.style.border = "0px solid red";
+            } else {
+                namea.innerHTML = "※名前を入力してください。";
+                namea.style.display = "block";
+                namea.style.backgroundColor = "blue";
+                namea.style.color = "red";
+                namea.style.border = "5px solid red";
+            }
+}
+function focusmail( $this ){
+var mail = fm.mail.value;
+            if (mail != null && mail != '') {
+                usermaila.innerHTML = "";
+                usermaila.style.border = "0px solid red";
+            } else {
+                usermaila.innerHTML = "※メールアドレスを入力してください。";
+                usermaila.style.display = "block";
+                usermaila.style.backgroundColor = "blue";
+                usermaila.style.color = "red";
+                usermaila.style.border = "5px solid red";
+            }
+}
+
+
+
+    window.onload = function() {
+        submit.addEventListener("click", function() {
+            var js = fm.js.value;
+            if (js != null && js != '') {
+                jsusea.innerHTML = "";
+            } else {
+                jsusea.innerHTML = "選んで下さい。";
+                jsusea.style.display = "block";
+                jsusea.style.backgroundColor = "#ff0";
+                jsusea.style.color = "#000000";
+                jsusea.style.padding = "5px 5px 5px 5px";
+            }
+
+            var choice = document.getElementsByName("choice");
+            for (var choicev = "", i = choice.length; i--;) {
+                if (choice[i].checked) {
+                    var choicev = choice[i].value;
+                    break;
+                }
+            }
+            if (choicev == "") {
+                proia.innerHTML = "中身を選んで下さい。";
+                proia.style.display = "block";
+                proia.style.backgroundColor = "#ff0";
+                proia.style.color = "#000000";
+                proia.style.padding = "5px 5px 5px 5px";
+            } else {
+                proia.innerHTML = "";
+                proia.style.padding = "0px 0px 0px 0px";
+            }
+
+            var think = document.getElementsByName("think");
+            for (var thinkv = "", i = think.length; i--;) {
+                if (think[i].checked) {
+                    var thinkv = think[i].value;
+                    break;
+                }
+            }
+            if (thinkv == "") {
+                tsoa.innerHTML = "思考を選んで下さい。";
+                tsoa.style.display = "block";
+                tsoa.style.backgroundColor = "blue";
+                tsoa.style.color = "#ffffff";
+                tsoa.style.padding = "5px 5px 5px 5px";
+            } else {
+                tsoa.innerHTML = "";
+                tsoa.style.padding = "0px 0px 0px 0px";
+            }
+        });
+    };
+
+var submit = document.getElementById("submit");
+
+function nopush(){
+    var namesubmit = document.fm.name.value;
+    var usermailsubmit = document.fm.mail.value;
+    if(namesubmit == "" || usermailsubmit == ""){
+        submit.disabled = true;
+    }else{
+        submit.disabled = false;
+    }
+}
+
+;(function(){
+var ynext = function(){
+    console.log("js");
+};
+
+var next = function(call){
+    console.log("明日の朝");
+    call();
+};
+
+next(ynext);
+
+ynext(function(){
+    console.log(next());
+});
+
+})();
+
+
+
+
+    </script>
+</body>
+
+</html>

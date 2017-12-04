@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>スクロールjs</title>
+</head>
+<style type="text/css" media="screen">
+body {
+    text-align: center;
+}
+
+#header {
+    background-color: #ccc;
+}
+
+.section {
+    width: 100%;
+    height: 1000px;
+}
+
+.test1 {
+    background-color: #ccc;
+}
+
+.test2 {
+    background-color: #ff0;
+}
+
+.test3 {
+    background-color: #0DFF87;
+}
+
+.inner001 {
+    background-color: #fff;
+    height: 200px;
+    opacity: 0;
+    transition: 1s;
+}
+
+.inner002 {
+    background-color: #fff;
+    height: 200px;
+}
+
+.inner003 {
+    background-color: #fff;
+    height: 200px;
+}
+.test{
+   background-color: #ccc;
+}
+</style>
+
+<body>
+    <header id="header">
+        <h1 id="next" class="testpp">jquery これこれ</h1>
+    </header>
+<section id="tt" class="tt">
+    <h2>callback</h2>
+    <ul class="tt-list">
+        <li class="tt-items">test1</li>
+        <li id="gg" class="tt-items">test2</li>
+        <li class="tt-items">test3</li>
+    </ul>
+    <div id="test" class="test"></div>
+</section>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+    	var tt = document.getElementById('tt');
+        var gg = document.getElementById('gg');
+        var test = document.getElementById('test');
+        var elem = document.getElementById("next");
+             var a = function(){
+                return new Promise(function(resolve, reject){
+                    setTimeout(function(){
+                        gg.innerHTML =  "test";
+                        resolve();
+                    }, 2000);
+                });
+             };
+             var b = function(){
+                return new Promise(function(resolve, reject){
+                    setTimeout(function(){
+                        gg.innerHTML =  "Gooooooo";
+                        resolve();
+                    }, 2000);
+                });
+             };
+             a().then(b);
+
+    </script>
+</body>
+
+</html>

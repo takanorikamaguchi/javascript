@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+	<meta charset="UTF-8">
+	<title>スクロールjs</title>
+</head>
+<style type="text/css" media="screen">
+*{		-webkit-transition: 1.3s;
+		transition: 1.3s;}
+	body,html,nav,ul,li,a,h1,h2{
+	padding: 0;
+	margin: 0;
+	}
+	ul{list-style:none; }
+	body{
+		position: relative;
+		text-align: center;
+	}
+	.wrapper{
+		width: 100vw;
+		height: 100vh;
+		margin: 0 auto;
+		background-color: #ff0;
+	}
+.gNavi{
+	position: absolute;
+	top: 0;
+	left: -400px;
+	width: 400px;
+	height: 100%;
+	overflow-y:  scroll;
+	}
+	.gNavi ul li{
+		padding: 50px 0 50px 0;
+	}
+.slidem{
+	left: 0;
+	background-color: #ccc;
+}
+.tt{
+	position: absolute;
+	top: 0;
+	right: -1px;
+	width: 0;
+	height: 100%;
+	overflow-y:  scroll;
+	background-color: red;
+	transform: scaleX(0);
+}
+.open{
+	right: 0;
+	width: 100%;
+	transform: scaleX(1);
+}
+#js02{
+	position: fixed;
+	top: 10px;
+	left: 10px;
+	z-index: 50;
+}
+#gg{
+	width: 300px;
+	height: 300px;
+	background-color: #ccc;
+}
+#gg.p-mega02{
+	background-color: red;
+}
+</style>
+<body id="body">
+<nav id="gnavi" class="gNavi">
+	<ul>
+		<li id="test" class="p-mega01"><a href="#">item 1</a><div class="mega01">test01</div></li>
+		<li id="dd" class="p-mega02"><a href="#">item 2</a><div class="mega02">test02</div></li>
+		<li class="p-mega03"><a href="#">item 3</a><div class="mega03">test03</div></li>
+		<li class="p-mega04"><a href="#">item 4</a><span><div class="mega04">test04</div></span></li>
+	</ul>
+</nav>
+<nav id="gnavi02" class="tt">
+	<ul>
+		<li class="p-mega01"><a href="#">item 1</a><div class="mega01">test01</div></li>
+		<li class="p-mega02"><a href="#">item 2</a><div class="mega02">test02</div></li>
+		<li class="p-mega03"><a href="#">item 3</a><div class="mega03">test03</div></li>
+		<li class="p-mega04"><a href="#">item 4</a><span><div class="mega04">test04</div></span></li>
+	</ul>
+</nav>
+<div class="wrapper">
+	<header>
+		<h1 id="ll" class="uo">メガメニュー</h1>
+		<button id="js">silde</button>
+		<button id="js02">silde02</button>
+		<input type="button" value="Exec" onclick="nextt();"/><br />
+
+	</header>
+
+<section class="section">
+	<div class="contents">
+		<h2 id="test01">コンテンツ</h2>
+	</div>
+	<!-- /.contents -->
+	<button id="zz">zz</button>
+	<button id="bb">bb</button>
+	<div id="gg"></div>
+</section>
+</div>
+<!-- /.wrapper -->
+
+<script>
+
+
+
+var zz = document.getElementById('zz');
+var bb = document.getElementById('bb');
+var oo = document.getElementById('dd');
+var gg = document.getElementById('gg');
+//var classname = tt.getAttribute("idName");
+
+var tt = document.getElementsByClassName("p-mega02");
+console.log(tt);
+tt[1].innerHTML = '<a href="#">世界旅行</a>';
+var next = tt[0].getAttribute("class");
+var pp = oo.getAttribute("class");
+
+
+var classg = document.getElementById('gg');
+var classname = classg.className;
+console.log(classname);
+
+
+zz.addEventListener('click', function(){
+	if ( classg.className == "p-mega02" ) {
+	gg.classList.remove('p-mega02');
+}else {
+	gg.setAttribute('class', "p-mega02");
+}
+});
+bb.addEventListener("click", function(){
+		oo.setAttribute('class', "p-mega02");
+}, false);
+
+
+</script>
+</body>
+</html>

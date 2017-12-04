@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>スクロールjs</title>
+</head>
+<style type="text/css" media="screen">
+body {
+    text-align: center;
+}
+
+#header {
+    background-color: #ccc;
+}
+
+.section {
+    width: 100%;
+    height: 1000px;
+}
+
+.test1 {
+    background-color: #ccc;
+}
+
+.test2 {
+    background-color: #ff0;
+}
+
+.test3 {
+    background-color: #0DFF87;
+}
+
+.inner001 {
+    background-color: #fff;
+    height: 200px;
+    opacity: 0;
+    transition: 1s;
+}
+
+.inner002 {
+    background-color: #fff;
+    height: 200px;
+}
+
+.inner003 {
+    background-color: #fff;
+    height: 200px;
+}
+.test{
+    font-size: 6px;
+}
+</style>
+
+<body>
+    <header id="header">
+        <h1 id="next" class="testpp">jquery これこれ</h1>
+    </header>
+    <div>
+        <p id="just">just</p>
+        <p id="just0">javascript</p>
+    </div>
+    <button id="test0">
+        並び替える
+    </button>
+    <section class="df"><span>40</span>
+        <ul id="test">
+            <li>Banana</li>
+            <li>Carrot</li>
+            <li>Apple</li>
+        </ul>
+    </section>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+    	var box = document.getElementById('test');
+        var opa = document.getElementById('test0');
+        var tt = document.getElementsByClassName('testpp');
+        var elem = document.getElementById("next");
+        var rt = "トライアンドえらー";
+// class 属性に設定されている値を取得
+elem.getAttribute("oo");
+         window.onload = function(){
+            box.onclick = function(){
+                box.innerHTML = "tesst";
+                console.log(opa);
+                opa.style.backgroundColor = "#BBCCDD";
+                console.log(tt);
+                elem.style.backgroundColor = "#BBCCDD";
+                var nn = rt.substring(0,4);
+                console.log(nn);
+            };
+         };
+    </script>
+</body>
+
+</html>

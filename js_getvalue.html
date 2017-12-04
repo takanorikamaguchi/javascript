@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>js</title>
+</head>
+<style type="text/css" media="screen">
+body {
+    text-align: center;
+}
+
+#header {
+    background-color: #ccc;
+}
+
+.section {
+    width: 100%;
+    height: 1000px;
+}
+
+.test1 {
+    background-color: #ccc;
+}
+
+.test2 {
+    background-color: #ff0;
+}
+
+.test3 {
+    background-color: #0DFF87;
+}
+
+.inner001 {
+    background-color: #fff;
+    height: 200px;
+    opacity: 0;
+    transition: 1s;
+}
+
+.inner002 {
+    background-color: #fff;
+    height: 200px;
+}
+
+.inner003 {
+    background-color: #fff;
+    height: 200px;
+}
+
+</style>
+
+<body>
+    <header id="header">
+        <h1 id="next" class="testpp">javascript これこれ</h1>
+        <p>
+            <buttom id="box">box</buttom>
+        </p>
+    </header>
+    <div>
+    </div>
+<nav id="nav" class="nav-wrap">
+    <ul class="nav-list">
+        <li class="nav-item"><a href="#" class="nav-item-link">test1</a>0000</li>
+        <li class="nav-item"><a href="#" class="nav-item-link">test2</a></li>
+        <li class="nav-item"><a href="#" class="nav-item-link">test3</a></li>
+        <li class="nav-item test"><a href="#" class="nav-item-link">test4</a></li>
+        <li class="nav-item"><a href="#" class="nav-item-link">test5</a></li>
+        <li class="nav-item"><a href="#" class="nav-item-link">test6</a></li>
+        <li class="nav-item"><a href="#" class="nav-item-link">test7</a></li>
+    </ul>
+</nav>
+    <section class="df"><span>40</span>
+        <ul id="test">
+            <li>Banana</li>
+            <li>Carrot</li>
+            <li>Apple</li>
+        </ul>
+    </section>
+ <section class="sectionP">
+     <h3 class="ttl">title1</h3>
+     <p>テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+ </section>
+  <section class="sectionP">
+     <h3 class="ttl">title4</h3>
+     <p>テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+ </section>
+ <section class="sectionP">
+     <h3 class="ttl">title2</h3>
+     <p>テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+ </section>
+ <section class="sectionP">
+     <h3 class="ttl">title3</h3>
+     <p>テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+ </section>
+ <section class="sectionP">
+     <h3 class="ttl">title5</h3>
+     <p>テキストテキストテキストテキストテキストテキストテキストテキスト</p>
+ </section>
+
+<footer>
+    <div id="ooo" class="footer-inner">
+        good life
+    </div>
+</footer>
+    <script>
+    var ii = document.getElementsByTagName('li');
+    var ooo = document.getElementsByTagName('ooo');
+    var gt = document.querySelectorAll("a.nav-item-link");
+    var n = document.querySelectorAll(".ttl");
+    var section = document.querySelectorAll(".sectionP h3");
+    var classname = document.getElementsByClassName("sectionP");
+
+    console.log(ii);
+    console.log(n);
+         window.onload = function(){
+            box.onclick = function(){
+
+var hhh = {
+    fir:"上", two:"中", tree:"下"
+};
+
+Object.keys(hhh).forEach (function(key){
+    var val = this[key];
+    console.log(key, val);
+}, hhh);
+
+var arr = [];
+                section.forEach(function(){
+
+                for (var i = 0; i < section.length; i++) {
+                arr[i] = {
+                        name : parseInt(section.innerHTML),
+                        source : section.Elements[i]
+                  }
+                }
+                    console.log(arr);
+                });
+
+            };
+         };
+    </script>
+</body>
+
+</html>
