@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>javascript</title>
+</head>
+<style type="text/css" media="screen">
+body {
+    text-align: center;
+    overflow: hidden;
+}
+
+#header {
+    background-color: #ccc;
+}
+
+.section {
+    width: 100%;
+    height: 1000px;
+}
+</style>
+
+<body>
+    <header id="header">
+        <h1 id="next" class="testpp">jquery これこれ</h1>
+    </header>
+    <div id="cc">
+        <p id="just">just</p>
+        <p id="just0">java<span>script</span></p>
+    </div>
+    <div id="test0">
+        並び替える
+    </div>
+    <section class="df"><span>40</span>
+        <ul id="jjj">
+            <li>Banana</li>
+            <li>Carrot</li>
+            <li>Apple</li>
+        </ul>
+        <div id="ppp">
+        <select name="hhh" id="hhh01">
+         <optgroup>
+             <option value="kkk1">test1</option>
+             <option value="kkk2">test2</option>
+             <option value="kkk3">test3</option>
+         </optgroup>
+         <option value="kkkz1">これじゃ</option>
+         <optgroup>
+             <option value="kkk1">test1</option>
+             <option value="kkk2">test2</option>
+             <option value="kkk3">test3</option>
+         </optgroup>
+        </select>
+        </div>
+    </section>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script>
+var cc = document.getElementById("cc");
+var just0 = document.getElementById("just0");
+var jjj = document.getElementById("jjj");
+    
+console.log(just0.childNodes[1]);
+    var justtext = just0.childNodes[1];
+just0.removeChild(justtext);
+just0.removeChild(just0.childNodes[0]);
+jjj.innerHTML = justtext;
+
+var ttt = document.createElement("a");
+var uuu = document.createTextNode("kore");
+ttt.setAttribute("href","#");
+ttt.appendChild(uuu);
+just0.appendChild(ttt);
+    
+just0.style.border = "10px solid #ccc";
+just0.style.backgroundColor = "#ff0";
+
+var hhh01 = document.getElementById("hhh01");
+var g = document.createElement("option");
+g.text = "ご飯ですよ。";
+g.setAttribute("value","next");
+hhh01.add(g, hhh01.options.item(7));
+    
+
+
+    
+</script>
+</body>
+
+
+</html>

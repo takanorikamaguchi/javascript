@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>javascript</title>
+</head>
+<style type="text/css" media="screen">
+body {
+    text-align: center;
+    overflow: hidden;
+}
+
+#header {
+    background-color: #ccc;
+}
+
+.section {
+    width: 100%;
+    height: 1000px;
+}
+
+#test0{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 500px;
+    height: 2px;
+    background-color: #ccc;
+    transform: rotate(60deg);
+    transition: 2s;
+}
+
+
+</style>
+
+<body>
+    <header id="header">
+        <h1 id="next" class="testpp">jquery これこれ</h1>
+    </header>
+    <div>
+        <p id="just">just</p>
+        <p id="just0">javascript</p>
+    </div>
+    <div id="test0">
+        並び替える
+    </div>
+    <section class="df"><span>40</span>
+        <ul id="jjj">
+            <li>Banana</li>
+            <li>Carrot</li>
+            <li>Apple</li>
+        </ul>
+    </section>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+
+var test0 = document.getElementById("test0");
+
+function anittt(callback){
+    var elem = document.getElementById("test0");
+    var suchi = 0;
+    var timer = setInterval(function(){
+        if( suchi < 300 ){
+            elem.style.top = elem.style.left =  suchi + "px";
+            suchi ++;
+        }else{
+            clearTimeout();
+        }
+    },20);
+    callback();
+}
+var f = function(){
+    var elem = document.getElementById("test0");
+    elem.style.left =  0 + "px";
+    };
+
+setInterval(function(){
+a(b.bind(null));
+}, 10000);
+
+var elem = document.getElementById("test0");
+var a = function(d){
+    setTimeout(function(){
+    elem.style.left =  300 + "px";
+    console.log("01");
+    d();
+    },5000);
+};
+var b = function (){
+    setTimeout(function(){
+    elem.style.top = elem.style.left =  -100 + "px";
+    console.log(elem);
+    },5000);
+};
+
+var jjj = document.getElementById("jjj");
+
+var konbu = function(){
+    console.log("それが" +"どうしたの"+this.getj);
+};
+
+function shio(l){
+    this.getj = l;
+    this.konbu = konbu;
+}
+var tokachi1 = new shio("木星");
+var tokachi2 = new shio("金星");
+var tokachi3 = new shio("火星");
+
+
+tokachi1.konbu();
+tokachi2.konbu();
+tokachi3.konbu();
+
+var obj = {
+  _a : 0,
+  get a(){return this._a; },
+  set a(n){this._a = n; }
+};
+
+obj.a=3;
+console.log(obj.a);
+
+    </script>
+</body>
+
+
+</html>

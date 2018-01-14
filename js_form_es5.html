@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>js</title>
+</head>
+<style type="text/css" media="screen">
+body {
+    text-align: center;
+}
+
+</style>
+<body>
+    <header id="header">
+        <h1 id="next" class="testpp">javascript ES5</h1>
+        <p>
+            <buttom id="box">box</buttom>
+        </p>
+    </header>
+    <footer>
+          
+        <div id="o01" class="footer-inner">
+            good life
+        </div>
+        <div id="o02" class="footer-inner">
+            good life
+        </div>
+    </footer>
+<script>
+var set=0;
+function double() {
+if(set==0){ set=1; } else {
+alert("只今処理中です。\nそのままお待ちください。");
+return false; }}
+var arr = [4,6,9,11,1,20];
+
+var o1 = document.getElementById('o01');
+var o2 = document.getElementById('o02');
+
+
+o1.innerHTML = "よもや危し" + arr;
+
+function ddd(arr){
+    arr.pop();
+    arr.pop();
+    return arr;
+}
+
+o2.innerHTML = "主役の座" + ddd(arr);
+
+
+</script>
+</body>
+
+</html>
